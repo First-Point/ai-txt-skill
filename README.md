@@ -100,3 +100,7 @@ MIT — see [LICENSE](./LICENSE).
 
 Copyright © 2026 FIRST POINT YAZILIM LİMİTED ŞİRKETİ
 contact@firstpoint.com.tr · https://firstpoint.com.tr/
+
+---
+
+Built by **[First Point Yazılım](https://firstpoint.com.tr/)** — Ankara, Turkey.
