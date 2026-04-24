@@ -29,7 +29,15 @@ The skill knows the difference between the three unrelated specs that all share 
 
 ## Installation
 
-### Option 1 — Add to a specific project (via `skills-lock.json`)
+### Option 1 — via the [skills.sh](https://skills.sh) CLI (fastest)
+
+```bash
+npx skills add First-Point/ai-txt-skill
+```
+
+One command, no git clone needed. Pick the target agent (`claude-code`) when prompted, or pass `-a claude-code -g -y` to install globally without prompts.
+
+### Option 2 — Add to a specific project (via `skills-lock.json`)
 
 In the project root's `skills-lock.json`:
 
@@ -47,7 +55,7 @@ In the project root's `skills-lock.json`:
 
 Next Claude Code session in that project will fetch the skill automatically.
 
-### Option 2 — Global install (available in every project)
+### Option 3 — Global install manually (available in every project)
 
 ```bash
 git clone https://github.com/firstpoint/ai-txt-skill.git ~/.claude/skills/ai-txt
@@ -59,7 +67,7 @@ Or, if you prefer the packaged `.skill` file:
 unzip ai-txt.skill -d ~/.claude/skills/
 ```
 
-### Option 3 — Per-project manual install
+### Option 4 — Per-project manual install
 
 ```bash
 git clone https://github.com/firstpoint/ai-txt-skill.git /path/to/project/.claude/skills/ai-txt
