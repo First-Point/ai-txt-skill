@@ -1,4 +1,4 @@
-# ai-txt — Claude Code skill
+# ai-txt: Claude Code skill
 
 A Claude Code skill that generates and audits the files that control or inform AI systems about a website:
 
@@ -12,7 +12,7 @@ The skill knows the difference between the three unrelated specs that all share 
 
 ## What it does
 
-**Generate mode** — ask it for a file and it produces the right one:
+**Generate mode**: ask it for a file and it produces the right one:
 
 > *"Block AI training on my site but keep ChatGPT and Perplexity search referrals."*
 > → `robots.txt` with per-vendor user-agents, training blocked, search bots allowed.
@@ -20,7 +20,7 @@ The skill knows the difference between the three unrelated specs that all share 
 > *"ChatGPT keeps inventing features that don't exist in my app."*
 > → aitxt.ing-format `/ai.txt` with a "What we do NOT offer" section that explicitly lists the hallucinations.
 
-**Audit mode** — point it at an existing file and it reports:
+**Audit mode**: point it at an existing file and it reports:
 
 - Deprecated tokens (`anthropic-ai`, `claude-web`)
 - Missing modern AI user-agents (as of April 2026)
@@ -29,7 +29,7 @@ The skill knows the difference between the three unrelated specs that all share 
 
 ## Installation
 
-### Option 1 — via the [skills.sh](https://skills.sh) CLI (fastest)
+### Option 1: via the [skills.sh](https://skills.sh) CLI (fastest)
 
 ```bash
 npx skills add First-Point/ai-txt-skill
@@ -37,7 +37,7 @@ npx skills add First-Point/ai-txt-skill
 
 One command, no git clone needed. Pick the target agent (`claude-code`) when prompted, or pass `-a claude-code -g -y` to install globally without prompts.
 
-### Option 2 — Add to a specific project (via `skills-lock.json`)
+### Option 2: Add to a specific project (via `skills-lock.json`)
 
 In the project root's `skills-lock.json`:
 
@@ -55,7 +55,7 @@ In the project root's `skills-lock.json`:
 
 Next Claude Code session in that project will fetch the skill automatically.
 
-### Option 3 — Global install manually (available in every project)
+### Option 3: Global install manually (available in every project)
 
 ```bash
 git clone https://github.com/firstpoint/ai-txt-skill.git ~/.claude/skills/ai-txt
@@ -67,7 +67,7 @@ Or, if you prefer the packaged `.skill` file:
 unzip ai-txt.skill -d ~/.claude/skills/
 ```
 
-### Option 4 — Per-project manual install
+### Option 4: Per-project manual install
 
 ```bash
 git clone https://github.com/firstpoint/ai-txt-skill.git /path/to/project/.claude/skills/ai-txt
@@ -79,7 +79,7 @@ Once installed, just ask naturally in Claude Code:
 
 - *"write me a robots.txt that blocks AI training"*
 - *"add an ai.txt to this Next.js project so ChatGPT stops making up features"*
-- *"check this robots.txt — is it up to date for 2026?"*
+- *"check this robots.txt: is it up to date for 2026?"*
 - *"generate an llms.txt for our docs site"*
 
 The skill triggers on these phrasings and walks you through the right file for your goal.
@@ -96,7 +96,7 @@ ai-txt/
     └── examples.md       # copy-paste templates for each file type
 ```
 
-The `references/` files are loaded on demand — Claude reads them only when the skill needs concrete data (bot names, IP ranges, file templates) so the main prompt stays lean.
+The `references/` files are loaded on demand: Claude reads them only when the skill needs concrete data (bot names, IP ranges, file templates) so the main prompt stays lean.
 
 ## Keeping it current
 
@@ -104,11 +104,11 @@ The AI user-agent list drifts: vendors add new bots, retire old ones, change pol
 
 ## License
 
-MIT — see [LICENSE](./LICENSE).
+MIT, see [LICENSE](./LICENSE).
 
 Copyright © 2026 FIRST POINT YAZILIM LİMİTED ŞİRKETİ
 contact@firstpoint.com.tr · https://firstpoint.com.tr/
 
 ---
 
-Built by **[First Point Yazılım](https://firstpoint.com.tr/)** — Ankara, Turkey.
+Built by **[First Point Yazılım](https://firstpoint.com.tr/)**, Ankara, Turkey.
